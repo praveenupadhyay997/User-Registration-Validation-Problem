@@ -12,6 +12,7 @@ namespace UserRegistrationValidation
         /// </summary>
         public static string FIRSTNAME_REGX = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string LASTNAME_REGX = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public static string EMAIL_REGX = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
         /// <summary>
         /// Determines whether [is valid first name] [the specified first name].
         /// </summary>
@@ -19,6 +20,10 @@ namespace UserRegistrationValidation
         /// <returns>
         ///   <c>true</c> if [is valid first name] [the specified first name]; otherwise, <c>false</c>.
         /// </returns>
+        public bool isValidEmailID(string emailId)
+        {
+            return Regex.IsMatch(emailId, EMAIL_REGX);
+        }
         public bool isValidFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, FIRSTNAME_REGX);
@@ -28,5 +33,7 @@ namespace UserRegistrationValidation
         {
             return Regex.IsMatch(lastName, LASTNAME_REGX);
         }
+
+      
     }
 }
