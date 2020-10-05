@@ -10,6 +10,7 @@ namespace UserRegistrationValidation
         public static string firstName;
         public static string lastName;
         public static string emailId;
+        public static string mobileNumber;
 
         static void Main(string[] args)
         {
@@ -22,19 +23,25 @@ namespace UserRegistrationValidation
             firstName = Console.ReadLine();
 
             validationKey = dataValidation.isValidFirstName(firstName);
-            Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid Name.", firstName);
+            Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid First Name.", firstName);
 
             Console.WriteLine("Enter User Last Name=");
             lastName = Console.ReadLine();
 
             validationKey = dataValidation.isValidLastName(lastName);
-            Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid Name.", lastName);
+            Console.WriteLine(validationKey ? "{0} is a Valid Last Name." : "{0} is Not a Valid Last Name.", lastName);
 
             Console.WriteLine("Enter User Email Id=");
             emailId = Console.ReadLine();
 
             validationKey = dataValidation.isValidEmailID(emailId);
-            Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid Name.", emailId);
+            Console.WriteLine(validationKey ? "{0} is a Valid Email-ID." : "{0} is Not a Valid Email-ID.", emailId);
+
+            Console.WriteLine("Enter User Mobile Number=");
+            mobileNumber = Console.ReadLine();
+
+            validationKey = dataValidation.isValidMobileNumber(mobileNumber);
+            Console.WriteLine(validationKey ? "{0} is a Valid Mobile Number." : "{0} is Not a Valid Mobile Number.", mobileNumber);
 
         }
     }
