@@ -41,7 +41,7 @@ namespace UserRegistrationValidation
             Console.WriteLine("Enter User Password=");
             password = Console.ReadLine();
 
-            validationKey = dataValidation.isValidPasswordUC5(password);
+            validationKey = dataValidation.isValidPasswordUC6(password);
             Console.WriteLine(validationKey ? "{0} is a Valid Password." : "{0} is Not a Valid Password.", password);
 
         }
