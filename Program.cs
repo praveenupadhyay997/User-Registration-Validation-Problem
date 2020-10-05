@@ -11,6 +11,7 @@ namespace UserRegistrationValidation
         public static string lastName;
         public static string emailId;
         public static string mobileNumber;
+        public static string password;
 
         static void Main(string[] args)
         {
@@ -37,11 +38,11 @@ namespace UserRegistrationValidation
             validationKey = dataValidation.isValidEmailID(emailId);
             Console.WriteLine(validationKey ? "{0} is a Valid Email-ID." : "{0} is Not a Valid Email-ID.", emailId);
 
-            Console.WriteLine("Enter User Mobile Number=");
-            mobileNumber = Console.ReadLine();
+            Console.WriteLine("Enter User Password=");
+            password = Console.ReadLine();
 
-            validationKey = dataValidation.isValidMobileNumber(mobileNumber);
-            Console.WriteLine(validationKey ? "{0} is a Valid Mobile Number." : "{0} is Not a Valid Mobile Number.", mobileNumber);
+            validationKey = dataValidation.isValidPasswordUC5(password);
+            Console.WriteLine(validationKey ? "{0} is a Valid Password." : "{0} is Not a Valid Password.", password);
 
         }
     }
