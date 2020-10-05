@@ -8,9 +8,10 @@ namespace UserRegistrationValidation
     class UserDataValidation
     {
         /// <summary>
-        /// The firstname regx
+        /// Regular Expression for matching parameters
         /// </summary>
-        public static string FIRSTNAME_REGX = "^[A-Z]{1}[A-Za-z]{3,}$";
+        public static string FIRSTNAME_REGX = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public static string LASTNAME_REGX = "^[A-Z]{1}[A-Za-z]{2,}$";
         /// <summary>
         /// Determines whether [is valid first name] [the specified first name].
         /// </summary>
@@ -21,6 +22,11 @@ namespace UserRegistrationValidation
         public bool isValidFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, FIRSTNAME_REGX);
+        }
+
+        public bool isValidLastName(string lastName)
+        {
+            return Regex.IsMatch(lastName, LASTNAME_REGX);
         }
     }
 }
