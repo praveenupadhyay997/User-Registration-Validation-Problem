@@ -9,6 +9,7 @@ namespace UserRegistrationValidation
         /// </summary>
         public static string firstName;
         public static string lastName;
+        public static string emailId;
 
         static void Main(string[] args)
         {
@@ -28,6 +29,12 @@ namespace UserRegistrationValidation
 
             validationKey = dataValidation.isValidLastName(lastName);
             Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid Name.", lastName);
+
+            Console.WriteLine("Enter User Email Id=");
+            emailId = Console.ReadLine();
+
+            validationKey = dataValidation.isValidEmailID(emailId);
+            Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid Name.", emailId);
 
         }
     }
