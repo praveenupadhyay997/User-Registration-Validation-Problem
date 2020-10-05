@@ -14,7 +14,7 @@ namespace UserRegistrationValidation
         public static string LASTNAME_REGX = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string EMAIL_REGX = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
         public static string MOBILENUMBER_REGX = "^[0-9]{2}[ ][0-9]{10}$";
-        public static string PASSWORD_UC5 = "^[a-zA-Z]{8,}$";
+        public static string PASSWORD_UC6 = "^(?=.*?[A-Z]).{8,}$";
         /// <summary>
         /// Determines whether [is valid first name] [the specified first name].
         /// </summary>
@@ -40,9 +40,9 @@ namespace UserRegistrationValidation
         {
             return Regex.IsMatch(mobileNumber, MOBILENUMBER_REGX);
         }
-        public bool isValidPasswordUC5(string password)
+        public bool isValidPasswordUC6(string password)
         {
-            return Regex.IsMatch(password, PASSWORD_UC5);
+            return Regex.IsMatch(password, PASSWORD_UC6);
         }
 
     }
