@@ -34,17 +34,17 @@ namespace UserRegistrationValidation
             
             bool validationKey;
 
-            Console.WriteLine("Enter User First Name=");
-            firstName = Console.ReadLine();
+            //Console.WriteLine("Enter User First Name=");
+            //firstName = Console.ReadLine();
 
-            validationKey = dataValidation.isValidFirstName(firstName);
-            Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid First Name.", firstName);
+            //validationKey = dataValidation.isValidFirstName(firstName);
+            //Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid First Name.", firstName);
 
-            Console.WriteLine("Enter User Last Name=");
-            lastName = Console.ReadLine();
+            //Console.WriteLine("Enter User Last Name=");
+            //lastName = Console.ReadLine();
 
-            validationKey = dataValidation.isValidLastName(lastName);
-            Console.WriteLine(validationKey ? "{0} is a Valid Last Name." : "{0} is Not a Valid Last Name.", lastName);
+            //validationKey = dataValidation.isValidLastName(lastName);
+            //Console.WriteLine(validationKey ? "{0} is a Valid Last Name." : "{0} is Not a Valid Last Name.", lastName);
 
             do
             {

@@ -12,7 +12,8 @@ namespace UserRegistrationValidation
         /// </summary>
         public static string FIRSTNAME_REGX = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string LASTNAME_REGX = "^[A-Z]{1}[A-Za-z]{2,}$";
-        public static string EMAIL_REGX = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+        //public static string EMAIL_REGX = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+        public static string EMAIL_REGX = "^[0-9A-Za-z]+([+-.][0-9A-Za-z]+)*[@][0-9A-Za-z]+[.][0-9A-Za-z]{2,3}([.][A-Za-z]{2})*$";
         public static string MOBILENUMBER_REGX = "^[0-9]{2}[ ][0-9]{10}$";
         public static string PASSWORD_UC8 = "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[@.,;$%^&#{}+_]{1}).{8,}$";
         /// <summary>
