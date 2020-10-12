@@ -1,8 +1,7 @@
-﻿using System;
-
-namespace UserRegistrationValidation
+﻿namespace UserRegistrationValidation
 {
-    class Program
+    using System;
+    public class Program
     {
         /// <summary>
         /// All the member variable as the user data to be entered locally from user's
@@ -23,13 +22,13 @@ namespace UserRegistrationValidation
             Console.WriteLine("Enter User First Name=");
             firstName = Console.ReadLine();
 
-            validationKey = dataValidation.isValidFirstName(firstName);
+            validationKey = dataValidation.isValidName(firstName);
             Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid First Name.", firstName);
 
             Console.WriteLine("Enter User Last Name=");
             lastName = Console.ReadLine();
 
-            validationKey = dataValidation.isValidLastName(lastName);
+            validationKey = dataValidation.isValidName(lastName);
             Console.WriteLine(validationKey ? "{0} is a Valid Last Name." : "{0} is Not a Valid Last Name.", lastName);
 
             Console.WriteLine("Enter User Email Id=");
@@ -37,6 +36,12 @@ namespace UserRegistrationValidation
 
             validationKey = dataValidation.isValidEmailID(emailId);
             Console.WriteLine(validationKey ? "{0} is a Valid Email-ID." : "{0} is Not a Valid Email-ID.", emailId);
+
+            Console.WriteLine("Enter User Mobile Number=");
+            mobileNumber = Console.ReadLine();
+
+            validationKey = dataValidation.isValidMobileNumber(mobileNumber);
+            Console.WriteLine(validationKey ? "{0} is a Valid Password." : "{0} is Not a Valid Mobile Number.", mobileNumber);
 
             Console.WriteLine("Enter User Password=");
             password = Console.ReadLine();
